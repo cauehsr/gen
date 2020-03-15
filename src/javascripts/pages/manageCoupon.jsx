@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom';
 
 import CouponsData from 'javascripts/components/couponsData';
 import firebase from '../../../Firebase';
+import Loading from 'javascripts/components/loading';
+
 
 class ManageCoupon extends Component {
   constructor(props) {
@@ -11,6 +13,7 @@ class ManageCoupon extends Component {
     this.ref = firebase.firestore().collection('coupon');
     this.state = {
       coupon: [],
+      loading: true,
       key: '',
     };
   }
@@ -28,8 +31,13 @@ class ManageCoupon extends Component {
       });
     });
     this.setState({
-      coupon
+      coupon,
     });
+
+    setTimeout(() => {
+      this.setState({ loading: false })
+
+    }, 1000);
   }
 
   componentDidMount() {
@@ -45,7 +53,7 @@ class ManageCoupon extends Component {
   }
 
   render() {
-    const { } = this.state;
+    const { loading } = this.state;
     return (
       <section id="manage" className={'manage'} ref="manage">
         <div className="manage-block">
@@ -71,6 +79,7 @@ class ManageCoupon extends Component {
             </ul>
           </div>
         </div>
+        <Loading result={require('../../lottie/loading.json')} activeStart={loading} />
       </section>
     );
   }

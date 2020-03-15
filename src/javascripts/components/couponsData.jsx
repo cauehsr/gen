@@ -18,8 +18,8 @@ export default props => (
     <div className="coupons-data-config">
       <Link to={`/show/${props.path}`}> <img className="coupons-data-config-image" src="/src/images/config.png" alt="config" /> </Link>
     </div>
-    <div className="coupons-data-delete">
-      <button onClick={props.onClick}>
+    <div className="coupons-data-delete" onClick={props.onClick}>
+      <button>
         <img className="coupons-data-delete-image" src="/src/images/delete.png" alt="delete" />
       </button>
     </div>

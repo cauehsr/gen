@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import FormComponent from 'javascripts/components/formComponent';
 
 import firebase from '../../../Firebase';
+import Loading from 'javascripts/components/loading';
+
 
 class CreatedCoupon extends Component {
   constructor(props) {
@@ -12,6 +14,7 @@ class CreatedCoupon extends Component {
     this.state = {
       nameCoupon: '',
       descount: '',
+      loading: false,
       date: '',
     };
   }
@@ -38,8 +41,9 @@ class CreatedCoupon extends Component {
 
   onSubmit = (e) => {
     e.preventDefault();
+    this.setState({ loading: true })
 
-    const { nameCoupon, descount, date } = this.state;
+    const { nameCoupon, descount, date, loading } = this.state;
 
     this.ref.add({
       nameCoupon,
@@ -51,8 +55,13 @@ class CreatedCoupon extends Component {
       this.setState({
         nameCoupon: '',
         descount: '',
-        date: ''
+        date: '',
       });
+
+      setTimeout(() => {
+        this.setState({ loading: false })
+
+      }, 1000);
     })
       .catch((error) => {
         console.error("Error adding document: ", error);
@@ -60,7 +69,7 @@ class CreatedCoupon extends Component {
   }
 
   render() {
-    const { nameCoupon, descount, date } = this.state;
+    const { nameCoupon, descount, date, loading } = this.state;
 
     return (
       <section id="edit-coupon" className={'edit-coupon'} ref="edit-coupon">
@@ -112,6 +121,7 @@ class CreatedCoupon extends Component {
             </form>
           </div>
         </div>
+        <Loading result={require('../../lottie/verify.json')} activeStart={loading} />
       </section>
     );
   }

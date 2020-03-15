@@ -7,6 +7,8 @@ import FormComponent from '../components/formComponent';
 import data from '../../JSON/mockProducts.json';
 import CouponsData from 'javascripts/components/couponsData';
 import firebase from '../../../Firebase';
+import Loading from 'javascripts/components/loading';
+
 
 class ApplyCoupons extends Component {
   constructor(props) {
@@ -14,6 +16,7 @@ class ApplyCoupons extends Component {
     this.ref = firebase.firestore().collection('coupon');
     this.state = {
       coupon: [],
+      loading: true,
       key: '',
     };
   }
@@ -30,17 +33,19 @@ class ApplyCoupons extends Component {
       });
     });
     this.setState({
-      coupon
+      coupon,
+      loading: false
     });
   }
 
   componentDidMount() {
+
     this.unsubscribe = this.ref.onSnapshot(this.onCollectionUpdate);
   }
 
 
   render() {
-    const { } = this.state;
+    const { loading } = this.state;
     return (
       <section id="apply" className={'apply'} ref="apply">
         <div className="apply-block">
