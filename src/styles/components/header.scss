@@ -1,0 +1,160 @@
+.header {
+    position: fixed;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    border-right: 1px solid #e7e9eb;
+    background: #fff;
+}
+
+.header-wrapper {
+    position: relative;
+    height: 100vh;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 38px 19px 30px;
+    position: relative;
+    margin: 0 auto 40px;
+    width: 85%;
+}
+
+.header-logo:after {
+    content: '';
+    background: #ebebeb;
+    width: 100%;
+    height: 1px;
+    display: block;
+    position: absolute;
+    bottom: 0;
+}
+
+.header-logo__btn:after {
+    content: '';
+    background: url($base_img+'/logo.png') no-repeat;
+    background-size: 100%;
+    width: 85px;
+}
+
+.header-nav {
+    padding: 0 19px;
+}
+
+.header-nav-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-nav-item {
+    width: 100%;
+    display: block;
+}
+
+.header-nav__btn--coupon {
+    background: #0075ea;
+    color: #fff;
+    align-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 48px;
+}
+
+.header-nav__btn {
+    color: #707070;
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    font-family: $Lato;
+    padding-left: 25px;
+}
+
+.header-nav__btn--icon-geral:before {
+    content: '';
+    background: url($base_img+'/header-icon-geral') no-repeat;
+    background-size: 100%;
+    width: 16px;
+    height: 16px;
+    display: block;
+    margin-right: 16px;
+}
+
+.header-nav__btn--icon-coupon:before {
+    content: '';
+    background: url($base_img+'/header-icon-coupon') no-repeat;
+    background-size: 100%;
+    width: 16px;
+    height: 12px;
+    display: block;
+    margin-right: 16px;
+}
+
+.header-nav__btn--icon-apply:before {
+    content: '';
+    background: url($base_img+'/header-icon-managed-coupon') no-repeat;
+    background-size: 100%;
+    width: 15px;
+    height: 18px;
+    display: block;
+    margin-right: 16px;
+}
+
+.header-user {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+.header-user-block {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    padding: 0 19px;
+
+    img {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+}
+
+.header-user:after {
+    content: '';
+    background: #e7e9eb;
+    width: 100%;
+    position: absolute;
+    height: 1px;
+    display: block;
+    top: -25px;
+}
+
+.text-user {
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: $Lato;
+}
+
+.text-user:after {
+    content: '';
+    background: url($base_img+'/header-arrow-bottom') no-repeat;
+    background-size: 100%;
+    width: 16px;
+    height: 10px;
+    display: block;
+    position: absolute;
+    right: 13px;
+    bottom: 13px;
+}

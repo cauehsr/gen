@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
+@import url('https://use.typekit.net/bve5awj.css');
+@import 'utils/variables';
+@import 'utils/functions';
+@import 'utils/media-queries';
+@import 'utils/reset';
+@import 'helpers/helpers';
+@import 'main';
+@import 'views/home';
+@import 'views/applyCoupons';
+@import 'components/components';
+@import 'components/header';
+@import 'components/hero';
+@import 'components/couponsData';
+@import 'components/formComponent';
+@import 'components/applyCouponComponent';

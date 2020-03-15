@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="93" height="57" viewBox="0 0 93 57">
+  <g id="Grupo_1" data-name="Grupo 1" transform="translate(-55 -18)">
+    <text id="gen" transform="translate(55 64)" font-size="39" font-family="Gilroy-ExtraBold, Gilroy" font-weight="800"><tspan x="0" y="0">gen</tspan></text>
+    <circle id="Elipse_1" data-name="Elipse 1" cx="7.5" cy="7.5" r="7.5" transform="translate(133 40)" fill="#0075ea"/>
+    <ellipse id="Elipse_2" data-name="Elipse 2" cx="6" cy="5.5" rx="6" ry="5.5" transform="translate(118 26)" fill="#69b4ff"/>
+    <circle id="Elipse_3" data-name="Elipse 3" cx="3" cy="3" r="3" transform="translate(138 18)" fill="#acd5ff"/>
+  </g>
+</svg>

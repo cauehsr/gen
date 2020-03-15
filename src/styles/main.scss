@@ -1,0 +1,34 @@
+body {
+  font-family: $Montserrat, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #0d0d0d;
+  background: #f5f6f8;
+}
+
+a {
+  transition: all 300ms ease;
+}
+
+p,
+li {
+  line-height: 1.3em;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+input {
+  outline: none;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0;
+  -webkit-appearance: none;
+}

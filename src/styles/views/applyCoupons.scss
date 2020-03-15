@@ -1,0 +1,35 @@
+.apply-available {
+  width: 34%;
+  display: flex;
+  margin-top: 88px;
+  justify-content: space-evenly;
+  background: #0075ea;
+  height: 60px;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  align-items: center;
+}
+
+.apply-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.apply-available-text {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.apply-available-link {
+  font-size: 14px;
+  text-decoration: underline;
+  color: #fff;
+  margin-left: 20px;
+
+  a {
+    color: #fff;
+    font-weight: 700;
+    font-family: $Lato;
+  }
+}

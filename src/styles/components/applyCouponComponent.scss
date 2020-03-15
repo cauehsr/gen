@@ -1,0 +1,82 @@
+.apply-coupons-items {
+  display: flex;
+  justify-content: space-between;
+  height: 78px;
+  width: 100%;
+  border: 1px solid #e7e9eb;
+  background: #fff;
+  border-radius: 20px;
+  align-items: center;
+  line-height: 78px;
+  margin-bottom: 20px;
+}
+
+.apply-coupons-items-image {
+  display: flex;
+  align-items: center;
+  width: 40%;
+}
+
+.apply-coupons-items-image--user {
+  width: 49px;
+  height: 46px;
+  margin: 0 19px 0 15px;
+}
+
+.apply-coupons-items-image--product {
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: $Lato;
+}
+
+.apply-coupons-items-price {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid #ebebeb;
+  border-right: 1px solid #ebebeb;
+}
+
+.apply-coupons-items-price--product {
+  font-family: $Lato;
+  font-size: 16px;
+  color: #000;
+}
+
+.apply-coupons-items-coupon {
+  width: 40%;
+  position: relative;
+  padding: 0 14px;
+
+  .form__input {
+    width: 100%;
+    margin: 0;
+    position: relative;
+    top: 3px;
+  }
+
+  .input-group {
+    padding: 0 8px 0 25px;
+  }
+}
+
+.input-icon {
+  position: absolute;
+  top: 33px;
+  right: 29px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.input-icon-add {
+  width: 17px;
+  height: 14px;
+}
+
+.apply-coupon {
+  width: 60%;
+  margin-top: 88px;
+}

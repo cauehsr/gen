@@ -1,0 +1,65 @@
+.form {
+  margin-top: 60px;
+}
+
+.form__input {
+  width: 57%;
+  height: 60px;
+  border: 1px solid #e7e9eb;
+  border-radius: 50px;
+  font-size: 18px;
+  color: #000;
+  padding-left: 20px;
+  font-family: $Lato;
+  margin-bottom: 20px;
+}
+
+.form-block {
+  width: 60%;
+  display: flex;
+  justify-content: unset;
+  align-items: center;
+}
+
+.input-group-date {
+  width: 55%;
+  display: block;
+
+  .form__input {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.button__eternal {
+  width: 30%;
+  display: flex;
+  font-size: 18px;
+  position: relative;
+  font-family: $Lato;
+  margin-left: 60px;
+}
+
+.button__eternal:before {
+  content: '';
+  width: 24px;
+  height: 24px;
+  border: 1px solid #e7e9eb;
+  border-radius: 5px;
+  display: block;
+  background: #fff;
+  margin-right: 10px;
+}
+
+.btn {
+  margin-top: 80px;
+  background: #0075ea;
+  display: block;
+  width: 32%;
+  height: 60px;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}

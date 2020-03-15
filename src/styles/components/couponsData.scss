@@ -1,0 +1,92 @@
+.manage-coupon {
+  margin-top: 88px;
+}
+
+.coupons-data-code-image {
+  width: 39px;
+  height: 26px;
+  margin: 0 20px 0 24px;
+}
+
+.coupons-data {
+  display: flex;
+  justify-content: space-between;
+  height: 78px;
+  width: 90%;
+  border: 1px solid #e7e9eb;
+  background: #fff;
+  border-radius: 20px;
+  align-items: center;
+  line-height: 78px;
+  margin-bottom: 20px;
+}
+
+.coupons-data-code {
+  display: flex;
+  align-items: center;
+  width: 30%;
+}
+
+.coupons-data-descount {
+  width: 13%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid #ebebeb;
+  border-right: 1px solid #ebebeb;
+}
+
+.coupons-data-descount--text {
+  color: #000;
+  font-size: 20px;
+  font-family: $Lato;
+}
+
+.coupons-data-date--text {
+  color: #000;
+  font-size: 20px;
+  font-family: $Lato;
+  margin-left: 40px;
+}
+
+.coupons-data-code--text {
+  color: #000;
+  font-size: 20px;
+  font-family: $Lato;
+  font-weight: 900;
+}
+
+.coupons-data-config-image {
+  width: 31px;
+  height: 31px;
+}
+
+.coupons-data-delete-image {
+  width: 22px;
+  height: 22px;
+}
+
+.coupons-data-date {
+  width: 37%;
+}
+
+.coupons-data-config {
+  width: 10%;
+  height: 76px;
+  background: #0075ea;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.coupons-data-delete {
+  width: 10%;
+  height: 76px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: #e25151;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
