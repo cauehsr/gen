@@ -82,6 +82,7 @@ class CreatedCoupon extends Component {
                 className="input-group"
               />
               <FormComponent
+                mask={[/\d/, /\d/]}
                 placeholder="Desconto"
                 type='text'
                 name='descount'

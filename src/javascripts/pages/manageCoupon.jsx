@@ -34,19 +34,6 @@ class ManageCoupon extends Component {
 
   componentDidMount() {
     this.unsubscribe = this.ref.onSnapshot(this.onCollectionUpdate);
-
-    // const ref = firebase.firestore().collection('coupon').doc(this.props.match.params.id);
-    // ref.get().then((doc) => {
-    //   if (doc.exists) {
-    //     this.setState({
-    //       Coupon: doc.data(),
-    //       key: doc.id,
-    //     });
-    //   } else {
-    //     console.log("No such document!");
-    //   }
-    // });
-
   }
 
   delete(item) {
@@ -68,7 +55,7 @@ class ManageCoupon extends Component {
           </h2>
             <p className="text">
               Gerencie seus cupons abaixo, ou
-              <Link to="/" className="link"> clique aqui </Link>
+              <Link to="/novo-cupon" className="link"> clique aqui </Link>
               para criar um novo cupom.
           </p>
             <ul className="manage-coupon">

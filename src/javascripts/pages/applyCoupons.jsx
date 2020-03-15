@@ -4,26 +4,43 @@ import { Link } from 'react-router-dom';
 
 import FormComponent from '../components/formComponent';
 
-import ApplyCouponComponent from 'javascripts/components/applyCouponComponent';
 import data from '../../JSON/mockProducts.json';
+import CouponsData from 'javascripts/components/couponsData';
+import firebase from '../../../Firebase';
 
 class ApplyCoupons extends Component {
   constructor(props) {
     super(props);
+    this.ref = firebase.firestore().collection('coupon');
     this.state = {
-
-      couponsList: [
-        {
-          product: 'Touca de Algodão',
-          price: 'R$86,40',
-          // date: '13/08/2020',
-        },
-      ]
+      coupon: [],
+      key: '',
     };
   }
 
+  onCollectionUpdate = (querySnapshot) => {
+    const coupon = [];
+    querySnapshot.forEach((doc) => {
+      const { nameCoupon, descount, date } = doc.data();
+      coupon.push({
+        key: doc.id,
+        doc, // DocumentSnapshot
+        nameCoupon,
+        descount,
+      });
+    });
+    this.setState({
+      coupon
+    });
+  }
+
+  componentDidMount() {
+    this.unsubscribe = this.ref.onSnapshot(this.onCollectionUpdate);
+  }
+
+
   render() {
-    const { couponsList } = this.state;
+    const { } = this.state;
     return (
       <section id="apply" className={'apply'} ref="apply">
         <div className="apply-block">
@@ -52,7 +69,6 @@ class ApplyCoupons extends Component {
                             placeholder="Cupom"
                             type='text'
                             name='coupon'
-                            // value={props.coupon}
                             className="input-group"
                           />
                           <button className="input-icon">
@@ -65,8 +81,19 @@ class ApplyCoupons extends Component {
                 }
               </ul>
               <div className="apply-available">
-                <h3 className="apply-available-text">Cupons Disponíveis</h3>
-                <h4 className="apply-available-link"><Link to="/gerenciar-cupons"> Editar Cupons </Link></h4>
+                <div className="apply-available--text">
+                  <h3 className="apply-available-text">Cupons Disponíveis</h3>
+                  <h4 className="apply-available-link"><Link to="/gerenciar-cupons"> Editar Cupons </Link></h4>
+                </div>
+                <ul className="apply-available-items">
+                  {this.state.coupon.map(item => (
+                    <CouponsData
+                      path={item.key}
+                      code={item.nameCoupon}
+                      descount={`-${item.descount}%`}
+                    />
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
